@@ -1,0 +1,55 @@
+<div class="documents">
+    <?php
+        echo "$connection<br>";
+        echo "$niveau_etudiant<br>";
+        echo "$specialite_etudiant<br>";
+    
+        if ($connection==1) {
+            $req_doc=$dbco->prepare("SELECT id_doc,nom_doc,matiere,nom_complet_professeur,
+            niveau_scolaire,type_doc,lien_doc,specialite FROM document 
+            WHERE niveau_scolaire='$niveau_etudiant' /*and specialite='$specialite_etudiant'*/");
+            $execute_doc_is_ok=$req->execute(array('id_doc','nom_doc','matiere','nom_complet_professeur'
+            ,'niveau_scolaire','type_doc','lien_doc','specialite'));
+            if ($execute_doc_is_ok==false) {
+                $erreur='la connection a la base de données et la récupération des données a échoué!';
+            }
+            else{
+                
+                    echo 'jawwek behi <br>';
+                   $docs=$req_doc->fetchAll();
+                   $nombre_de_cours=$req_doc->rowCount();
+                   $i=1;
+                   echo $nombre_de_cours;
+                  
+                   foreach ($docs as $doc ) {
+                       
+                       if ($i%3==1) {
+                            echo "<div class=\"row\">";
+                        }
+                        $id_doc=$doc['id_doc'];
+                        $nom_doc=$doc['nom_doc'];
+                        $matiere=$doc['matiere'];
+                        $nom_complet_professeur=$doc['nom_complet_professeur'];
+                        $niveau_scolaire=$doc['niveau_scolaire'];
+                        $type_doc=$doc['type_doc'];
+                        $lien_doc=$doc['lien_doc'];
+                        $specialite=$doc['specialite'];
+                        echo"<article class='col-md-4 col-lg-4 col-xs-12 col-sm-12'>";
+                        afficher_document($id_doc,$nom_doc,$matiere,$nom_complet_professeur,$niveau_scolaire,$type_doc,$lien_doc,$specialite);
+                        echo "</article>" ;
+                        if ($i%3==0) {
+                            echo "</div>";
+                        }
+                        $i=$i+1;
+                        
+                   }
+                   
+                   
+                }
+            }
+        else {
+            echo 'erreur de connection au compte!';
+        }
+        
+    ?>
+</div>

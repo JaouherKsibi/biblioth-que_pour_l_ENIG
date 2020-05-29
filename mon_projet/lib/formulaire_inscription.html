@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>s'inscrire à l'ENIG</title>
+    <link rel="stylesheet" href="../css/style_inscrit.css">
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="logo">
+                <img src="../img/logoENIG1.jpeg" alt="logo ENIG">
+            </div>
+            <ul class="nav-area">
+                <li><a href="../index.html">accueil</a></li>
+                <li><a href="../lib/home_page.html">Home</a></li>
+                <li><a href="../lib/learn_more_about_enig.html">About</a></li>
+                <li><a href="../mailto:ksibijaouher@gmail.com">Contact</a></li>
+                <li><a href="../lib/profession1.php">Login</a></li>
+                <li><a href="../lib/profession.php">Register</a></li>
+            </ul>
+         </div>
+           
+   </header>
+   <div class="container">
+        <h1>formulaire d'inscription</h1>
+        <form action="formulaire_inscription.php" method="post" autocomplete="off" name="formulaire d'inscription ENIG">
+            <fieldset>
+                <legend>Informations personelles</legend>
+                <table>
+                    <tr>
+                        <td><label for="nom">Nom:</label></td>
+                        <td><input type="text" title="nom  de l'etudiant " name="nom_etudiant" id="nom" placeholder="entrez votre nom svp" required></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="prenom">Prenom:</label>
+                        </td>
+                        <td>
+                            <input type="text" name="prenom_etudiant" title="prenom de l'etudiant" id="prenom" placeholder="entrez votre prenom svp" required>
+                        </td>
+                        <tr>
+                            <td>
+                                <label for="numCin">Numero de la Carte d'Identité Nationale(num CIN):</label>
+                            </td>
+                            <td>
+                                <input type="text" name="cin" title="num CIN" id="numCin" placeholder="numero de la carte d identite nationale" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="date_de_naissance">Date de naissance:</label>
+                            </td>
+                            <td>
+                                <input type="date" name="date_de_naissance" id="date_de_naissance" required>
+                            </td>
+                        </tr>
+                    </tr>
+                </table>
+                
+            </fieldset>
+            <fieldset>
+                <legend> contact de l'etudiant</legend>
+                <table>
+                    <tr>
+                        <td>
+                            <label for="email_etudiant">Email:</label>
+                        </td>
+                        <td>
+                            <input type="email" name="email" id="email_etudiant" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="numtel">Numero de téléphone:</label>
+                        </td>
+                        <td>
+                            <input type="text" name="numero_de_telephone" title="numero de telephone de l'etudiant " placeholder="numero de telephone" id="numtel" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="governat"> Governat : </label>
+                        </td>
+                        <td>
+                            <input type="text" name="governat" id="governat" placeholder="governat" title="governat" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="ville_d_origine_etudiant"> Ville d'origine: </label>
+                        </td>
+                        <td>
+                            <input type="text" name="ville_d_origine" title="ville_d_origine_etudiant" placeholder="ville d origine " id="ville_d_origine_etudiant" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="codepostale">Code postale</label>
+                        </td>
+                        <td>
+                            <input type="text" maxlength="4" required id="codepostale" name="codepostale">
+                        </td>
+                    </tr>
+                </table>
+                
+            </fieldset>
+            <fieldset>
+                <legend>informations scolaire </legend>
+                <table>
+                    <tr>
+                        <td>
+                            <label for="niveau"> Niveau Scolaire: </label>
+                        </td>
+                        <td>
+                            <select name="niveau" id="niveau" required>
+                                <optgroup>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </optgroup>
+                            </select>
+                            <!--input type="number" name="niveau" id="niveau" min="1" max="3" required-->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="specialite"> Spécialité: </label>
+                        </td>
+                        <td>
+                            <select name="specialite" id="specialite" required>
+                                <optgroup>
+                                    <option value="GCR">GCR</option>
+                                    <option value="GCP">GCP</option>
+                                    <option value="GCV">GCV</option>
+                                    <option value="GEA">GEA</option>
+                                    <option value="GM">GM</option>
+                                </optgroup>
+                            </select>
+                            <!--input type="text" name="specialite" title="spécialité" id="specialite"  required-->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="classe">classe</label>
+                        </td>
+                        <td>
+                            <select name="classe" id="classe">
+                                <optgroup>
+                                    <option value="A">A</option>
+                                    <option value="B">B</option>
+                                </optgroup>
+                            </select>
+                            <!--input type="text" required maxlength="1" placeholder="classe A ou B" id="classe" name="classe"-->
+                        </td>
+                    </tr>
+                </table>
+                
+            </fieldset>
+            <fieldset>
+                <legend>creation d'un compte ENIG </legend>
+                <table>
+                    <tr>
+                        <td>
+                            <label for="mailENIG"></label>
+                        </td>
+                        <td>
+                            <input type="email" pattern="*@enig.tn"  name="adresseENIG" placeholder="nomprenom@enig.tn" required id="mailENIG">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="motdepasse1">tapez votre mot de passe </label>
+                        </td>
+                        <td>
+                            <input type="password" title="mot de passe " name="motdepasse1" id="motdepasse1" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="motdepasse2">retapez votre mot de passe </label>
+                        </td>
+                        <td>
+                            <input type="password" name="motdepasse2" id="motdepasse2" required title="motdepasse2">
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <div class="container">
+                <table>
+                    <tr>
+                        <td>
+                            <tr>
+                                <label for="robot">je suis pas un robot </label>
+                            </tr>
+                            <tr>
+                                <input type="checkbox" name="robot" id="robot" required>
+                            </tr>
+                        </td>
+                        <td>
+                            <input type="submit" value="s'inscrire" name="submit">
+                        </td>
+                    </tr>
+                </table>
+            </div> 
+        </form>
+    </div>
+</body>
+</html>

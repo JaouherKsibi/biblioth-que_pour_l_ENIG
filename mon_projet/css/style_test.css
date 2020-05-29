@@ -1,0 +1,11 @@
+*
+{
+    margin:0px;
+    padding:0px;
+}
+.container .row {
+    color:black;
+    text-decoration: none;
+    background-color: white;
+    padding-bottom: 50px;
+}

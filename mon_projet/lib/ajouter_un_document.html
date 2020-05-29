@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style_page_de_connection.css">
+    <title>connection</title>
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="logo">
+                <img src="../img/logoENIG1.jpeg" alt="logo ENIG">
+            </div>
+            <ul class="nav-area">
+                <li><a href="../index.html">accueil</a></li>
+                <li><a href="../lib/home_page.html">Home</a></li>
+                <li><a href="../lib/learn_more_about_enig.html">About</a></li>
+                <li><a href="../mailto:ksibijaouher@gmail.com">Contact</a></li>
+                <li><a href="../lib/profession1.php">Login</a></li>
+                <li><a href="../lib/profession.php">Register</a></li>
+            </ul>
+         </div>
+           
+   </header>
+   <div id="container">
+            
+            <form action="ajouter_un_document.php" method="POST" autocomplete="off">
+                <label><b>votre nom complet </b></label>
+                <input type="text" placeholder="Entrez votre prenom puis espace puis votre nom" name="auteur" required>
+                <label><b>spécialité </b></label><br>
+                <select name="specialite" id="specialite">
+                    <optgroup>
+                        <option value="GCR">GCR</option>
+                        <option value="GCV">GCV</option>
+                        <option value="GCP">GCP</option>
+                        <option value="GEA">GEA</option>
+                        <option value="GM">GM</option>
+                    </optgroup>
+                </select><br><br>
+                <label for="niveau"><b>niveau</b></label><br><br>
+                <select name="niveau" id="niveau">
+                    <optgroup>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </optgroup>
+                </select><br>
+                <label for="type_doc"><b>type du document</b></label><br>
+                <select name="type_doc" id="type_doc">
+                    <optgroup>
+                        <option value="cours">cours</option>
+                        <option value="examen">examen</option>
+                        <option value="serie d exercice">serie d'exercice</option>
+                    </optgroup>
+                </select><br>
+                <label for="matiere"><b>matière</b> </label>
+                <input type="text" placeholder="Entrer la matiere " name="matiere" required>
+                <label ><b>nom du document</b> </label>
+                <input type="text" name="nom_doc" placeholder="entrez le nom du document " required>
+                <label for="lien_doc"><b> lien du document</b></label>
+                <input type="text" placeholder="entrez le nom du document " name="lien_doc" required>
+
+                <input type="submit" id='submit' name="submit" value='ajouter' >
+                
+            </form>
+        </div>
+</body>
+</html>

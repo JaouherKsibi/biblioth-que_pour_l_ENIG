@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("../img/Gabès-tourisme.jpeg");
+    -webkit-background-size:cover;
+    background-size: cover;
+    background-position: center center;
+}
+.wrapper{
+    width: 1170px;
+    margin:auto;
+}
+header{
+    
+    height: 50vh;
+    
+    
+    
+    position: relative;
+}
+.nav-area
+{
+    float: right;
+    list-style: none;
+    margin-top: 30px;
+}
+.nav-area li{
+    display: inline-block;
+}
+.nav-area li a{
+    color:#fff;
+    text-decoration: none;
+    padding: 5px 20px;
+    font-family: poppins;
+    font-size: 16px;
+}
+.nav-area li a:hover{
+    background: #fff;
+    color: #333;
+}
+.logo img{
+    width: 100px;
+    float: left;
+    height: auto;
+}
+.container{
+    width: 30%;
+    margin: auto;
+    background-color: dodgerblue;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.container form button{
+    height: 1.5cm;
+    width: 5cm;
+    background-color: deepskyblue;
+    margin-top: 1cm;
+    transition-duration: 4ms;
+}
+.container form button:hover{
+    background-color: fuchsia;
+}

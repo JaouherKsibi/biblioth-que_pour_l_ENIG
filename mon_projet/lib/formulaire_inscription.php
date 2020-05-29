@@ -1,0 +1,54 @@
+
+<?php
+    $servername = 'localhost';
+    $username = 'root';
+    $password = '';
+    $dbname='projet1';
+    if (isset($_POST["submit"])) {
+        $nom=htmlentities(trim($_POST["nom_etudiant"]));
+        $prenom=htmlentities(trim($_POST["prenom_etudiant"]));
+        $numcin=htmlentities(trim($_POST["cin"]));
+        $date_de_naissance=htmlentities(trim($_POST["date_de_naissance"]));
+        $email =htmlentities(trim($_POST["email"]));
+        $numero_de_telephone=htmlentities(trim($_POST["numero_de_telephone"]));
+        $governat=htmlentities(trim($_POST["governat"]));
+        $ville_d_origine=htmlentities(trim($_POST["ville_d_origine"]));
+        $codepostale=htmlentities(trim($_POST["codepostale"]));
+        $niveau=htmlentities(trim($_POST["niveau"]));
+        $specialite=htmlentities(trim($_POST["specialite"]));
+        $classe=htmlentities(trim($_POST["classe"]));
+        $adresseENIG=htmlentities(trim($_POST["adresseENIG"]));
+        $motdepasse1=htmlentities(trim($_POST["motdepasse1"]));
+        $motdepasse2=htmlentities(trim($_POST["motdepasse2"]));
+        $robot=htmlentities(trim($_POST["robot"]));
+        if ( $nom&&$prenom&&$numcin&&$date_de_naissance&&$email&&$numero_de_telephone&&$adresseENIG&&$governat&&$ville_d_origine&&$codepostale&&$niveau&&$specialite&&$classe&&$motdepasse1&&$motdepasse2&&$robot) {
+           if ($motdepasse2==$motdepasse1) {
+            try{
+                $dbco = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+                $dbco->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                
+                $sql = "INSERT INTO etudiant_ENIG(nom,prenom,numcin,date_de_naissance,email,numero_de_telephone,governat,ville_d_origine,code_postale,niveau,specialite,classe,mot_de_passe,adresseENIG)VALUES('$nom','$prenom','$numcin','$date_de_naissance','$email','$numero_de_telephone','$governat','$ville_d_origine','$codepostale','$niveau','$specialite','$classe','$motdepasse1','$adresseENIG')";
+                
+                $dbco->exec($sql);
+                echo 'Entrée ajoutée dans la table';
+            }
+            
+            catch(PDOException $e){
+              echo "Erreur : " . $e->getMessage();
+            }
+               
+           }else {
+               echo ("les deux mots de passe doivent être identiques !");
+           }
+        }else {
+            echo("s'il vous plait de remplir tous les champs !");
+        }
+
+        
+
+
+
+
+
+    }
+?>

@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    
+    height: 25vh;
+    position: relative;
+    background-color: dimgray;
+}
+.wrapper{
+    width: 1170px;
+    margin:auto;
+}
+
+
+.nav-area
+{
+    float: right;
+    list-style: none;
+    margin-top: 30px;
+    
+}
+.nav-area li{
+    display: inline-block;
+}
+.nav-area li a{
+    color:#000;
+    text-decoration: none;
+    padding: 5px 20px;
+    font-family: poppins;
+    font-size: 16px;
+}
+.nav-area li a:hover{
+    background: #da0f0f;
+    color: #333;
+}
+.logo img{
+    width: 100px;
+    float: left;
+    height: auto;
+}
+.container h1{
+    margin-left: 2cm;
+    padding-top: 0.5cm;
+    padding-bottom: 0.5cm;
+    text-align: center;
+    
+}
+.container form fieldset{
+    margin-top: 0.5cm;
+    margin-left: 3cm;
+    padding-left: 25px;
+    padding-top: 0.5cm;
+    padding-bottom: 0.5cm;
+}
+form{
+    padding-left: 0.5cm;
+   
+}
+.container form .container{
+    margin-top: 0.5cm;
+    margin-left: 3cm;
+    padding-left: 25px;
+    padding-top: 0.5cm;
+    padding-bottom: 0.5cm;
+}
+

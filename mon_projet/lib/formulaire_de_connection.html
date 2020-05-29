@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style_page_de_connection.css">
+    <title>connection</title>
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="logo">
+                <img src="../img/logoENIG1.jpeg" alt="logo ENIG">
+            </div>
+            <ul class="nav-area">
+                <li><a href="../index.html">accueil</a></li>
+                <li><a href="../lib/home_page.html">Home</a></li>
+                <li><a href="../lib/learn_more_about_enig.html">About</a></li>
+                <li><a href="../mailto:ksibijaouher@gmail.com">Contact</a></li>
+                <li><a href="../lib/profession1.php">Login</a></li>
+                <li><a href="../lib/profession.php">Register</a></li>
+            </ul>
+         </div>
+           
+   </header>
+   <div id="container">
+            
+            <form action="page_d_accueuil.php" method="POST" autocomplete="off">
+                <h1>Connexion</h1>
+                
+                <label><b>adresse ENIG</b></label>
+                <input type="text" placeholder="Entrer votre adresse ENIG" name="adresse_enig" required>
+
+                <label><b>Mot de passe</b></label>
+                <input type="password" placeholder="Entrer le mot de passe" name="password" required>
+
+                <input type="submit" id='submit' name="submit" value='LOGIN' >
+                
+            </form>
+            <p>vous n'avez pas de compte? <a href="profession.php">creer compte</a></p>
+        </div>
+</body>
+</html>
